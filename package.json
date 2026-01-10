@@ -1,0 +1,21 @@
+{
+  "name": "workshop-minimax",
+  "version": "1.0.0",
+  "description": "A reveal.js presentation built with bun",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun server.js",
+    "start": "bun run dev",
+    "serve": "bun run dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  }
+}

@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>My Presentation - reveal.js</title>
+
+  <meta name="description" content="A reveal.js presentation created with bun">
+
+  <!-- Core reveal.js styles -->
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/black.css">
+
+  <!-- Plugin styles -->
+  <link rel="stylesheet" href="../node_modules/reveal.js/plugin/highlight/monokai.css">
+
+  <!-- Custom styles -->
+  <style>
+    /* Custom CSS for additional styling */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      text-transform: none;
+    }
+
+    .reveal .slides section {
+      padding: 20px;
+    }
+
+    /* Code block styling */
+    .reveal pre {
+      margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Image placeholder styling */
+    .image-placeholder {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      border: 2px dashed #4a5568;
+      border-radius: 8px;
+      padding: 40px;
+      color: #718096;
+      font-size: 0.8em;
+    }
+
+    /* Custom fragment animations */
+    .fragment.fade-up {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .fragment.fade-up.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Highlight important text */
+    .highlight {
+      color: #42b883;
+      font-weight: bold;
+    }
+
+    /* Two-column layout */
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .column {
+      flex: 1;
+    }
+
+    /* Badge styling */
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.6em;
+      margin: 5px;
+      background: #42b883;
+      color: #fff;
+    }
+
+    .badge.warning {
+      background: #f6ad55;
+      color: #1a1a2e;
+    }
+
+    .badge.info {
+      background: #4299e1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Required wrapper structure -->
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ==================== SLIDE 1: TITLE ==================== -->
+      <section>
+        <h1>My Presentation</h1>
+        <h3>Built with reveal.js</h3>
+        <p>
+          <small>Created with ❤️ using reveal.js 5.2.1 + bun</small>
+        </p>
+
+        <div style="margin-top: 50px;">
+          <span class="badge">HTML</span>
+          <span class="badge warning">CSS</span>
+          <span class="badge info">JavaScript</span>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 2: AGENDA ==================== -->
+      <section>
+        <h2>Agenda</h2>
+        <ul>
+          <li class="fragment fade-up">Introduction to reveal.js</li>
+          <li class="fragment fade-up">Features and Capabilities</li>
+          <li class="fragment fade-up">Markdown Support</li>
+          <li class="fragment fade-up">Code Syntax Highlighting</li>
+          <li class="fragment fade-up">Vertical Slides</li>
+          <li class="fragment fade-up">Q&A</li>
+        </ul>
+      </section>
+
+      <!-- ==================== SLIDE 3: WHAT IS REVEAL.JS ==================== -->
+      <section>
+        <section>
+          <h2>What is reveal.js?</h2>
+          <p class="fragment fade-up">
+            <span class="highlight">reveal.js</span> is an open-source HTML presentation framework
+          </p>
+          <p class="fragment fade-up">
+            It enables anyone with a web browser to create beautiful presentations
+          </p>
+
+          <div class="fragment fade-up" style="margin-top: 40px;">
+            <div class="columns">
+              <div class="column">
+                <h4>🎨</h4>
+                <p>Beautiful themes</p>
+              </div>
+              <div class="column">
+                <h4>📝</h4>
+                <p>Markdown support</p>
+              </div>
+              <div class="column">
+                <h4>💻</h4>
+                <p>Syntax highlighting</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Vertical sub-slide -->
+        <section>
+          <h3>Key Features</h3>
+          <ul>
+            <li>Nested slides (horizontal & vertical)</li>
+            <li>Auto-animate transitions</li>
+            <li>Fragment animations</li>
+            <li>Speaker notes</li>
+            <li>PDF export</li>
+            <li>Math typesetting (LaTeX)</li>
+            <li>Zoom & Search</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- ==================== SLIDE 4: BASIC HTML SLIDES ==================== -->
+      <section>
+        <h2>Basic HTML Structure</h2>
+        <p>reveal.js works with standard HTML markup</p>
+
+        <div class="fragment fade-up">
+          <pre><code data-trim data-noescape class="html">
+&lt;div class="reveal"&gt;
+  &lt;div class="slides"&gt;
+    &lt;section&gt;
+      &lt;h2&gt;My Slide&lt;/h2&gt;
+      &lt;p&gt;Content goes here&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </div>
+
+        <p class="fragment fade-up" style="font-size: 0.7em; margin-top: 20px;">
+          Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">Space</kbd> or <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">→</kbd> to navigate
+        </p>
+      </section>
+
+      <!-- ==================== SLIDE 5: MARKDOWN SUPPORT ==================== -->
+      <section data-markdown>
+        <script type="text/template">
+          ## Markdown Support
+
+          You can write your slides in **Markdown**!
+
+          ### Features:
+          - Write content using familiar Markdown syntax
+          - Use `---` for horizontal slides
+          - Use `--` for vertical slides
+          - Add custom attributes to slides
+
+          ### Code blocks:
+          ```javascript
+          function greet(name) {
+            return `Hello, ${name}!`;
+          }
+          ```
+
+          > Markdown makes content creation fast and easy!
+        </script>
+      </section>
+
+      <!-- ==================== SLIDE 6: CODE SYNTAX HIGHLIGHTING ==================== -->
+      <section>
+        <h2>Syntax Highlighting</h2>
+        <p>Code examples are beautifully highlighted</p>
+
+        <div class="columns">
+          <div class="column">
+            <h4>JavaScript</h4>
+            <pre><code data-trim data-noescape class="javascript">
+// Fibonacci sequence
+function fib(n) {
+  if (n <= 1) return n;
+  return fib(n-1) + fib(n-2);
+}
+
+console.log(fib(10)); // 55
+            </code></pre>
+          </div>
+
+          <div class="column">
+            <h4>Python</h4>
+            <pre><code data-trim data-noescape class="python">
+# List comprehension
+squares = [x**2 for x in range(10)]
+
+# Generator expression
+gen = (x**2 for x in range(10))
+
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+            </code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 7: ADVANCED CODE HIGHLIGHTING ==================== -->
+      <section>
+        <h2>Line Highlighting</h2>
+        <p>Highlight specific lines in your code</p>
+
+        <pre><code data-trim data-noescape data-line-numbers="2|4-6|8" class="javascript">
+function calculateFactorial(n) {
+  // Base case: 0! = 1
+  if (n === 0) return 1;
+
+  // Recursive case
+  return n * calculateFactorial(n - 1);
+}
+
+console.log(calculateFactorial(5)); // 120
+        </code></pre>
+
+        <p style="font-size: 0.7em; margin-top: 20px;">
+          Use <code style="background: #4a5568; padding: 2px 6px; border-radius: 4px;">data-line-numbers="2|4-6"</code> to highlight specific lines
+        </p>
+      </section>
+
+      <!-- ==================== SLIDE 8: FRAGMENTS ==================== -->
+      <section>
+        <h2>Fragment Animations</h2>
+        <p>Elements can appear one at a time</p>
+
+        <ul>
+          <li class="fragment fade-up">First item appears</li>
+          <li class="fragment fade-up">Second item follows</li>
+          <li class="fragment fade-up">Third item comes next</li>
+          <li class="fragment fade-up">And so on...</li>
+        </ul>
+
+        <div class="fragment fade-up" style="margin-top: 30px;">
+          <p style="color: #42b883;">🎉 All items are now visible!</p>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 9: VERTICAL SLIDES ==================== -->
+      <section>
+        <section>
+          <h2>Vertical Slides</h2>
+          <p>Use nested sections for vertical navigation</p>
+          <p class="fragment fade-up">
+            Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">↓</kbd> to go down
+          </p>
+          <p class="fragment fade-up">
+            Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">↑</kbd> to go up
+          </p>
+        </section>
+
+        <section>
+          <h3>Sub-slide 1</h3>
+          <p>This is a nested vertical slide</p>
+          <p style="font-size: 0.7em; color: #718096;">
+            Great for organizing related content
+          </p>
+        </section>
+
+        <section>
+          <h3>Sub-slide 2</h3>
+          <p>Another vertical slide</p>
+          <ul>
+            <li>Point A</li>
+            <li>Point B</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- ==================== SLIDE 10: MEDIA PLACEHOLDER ==================== -->
+      <section>
+        <h2>Images & Media</h2>
+
+        <div class="columns">
+          <div class="column">
+            <div class="image-placeholder">
+              <div style="font-size: 3em; margin-bottom: 10px;">🖼️</div>
+              <p>Image Placeholder</p>
+              <p style="font-size: 0.7em;">Add your image here</p>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="image-placeholder">
+              <div style="font-size: 3em; margin-bottom: 10px;">🎬</div>
+              <p>Video Placeholder</p>
+              <p style="font-size: 0.7em;">Embed videos easily</p>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.7em; margin-top: 20px;">
+          Supported formats: JPG, PNG, GIF, SVG, MP4, WebM, YouTube, Vimeo
+        </p>
+      </section>
+
+      <!-- ==================== SLIDE 11: TRANSITIONS ==================== -->
+      <section>
+        <h2>Transition Effects</h2>
+        <p>Multiple transition styles available</p>
+
+        <div class="columns" style="font-size: 0.8em;">
+          <div class="column">
+            <ul>
+              <li><code>none</code> - No transition</li>
+              <li><code>fade</code> - Cross fade</li>
+              <li><code>slide</code> - Slide in/out</li>
+            </ul>
+          </div>
+          <div class="column">
+            <ul>
+              <li><code>convex</code> - Convex slide</li>
+              <li><code>concave</code> - Concave slide</li>
+              <li><code>zoom</code> - Zoom in/out</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="font-size: 0.7em; margin-top: 30px;">
+          Set in <code>Reveal.initialize({ transition: 'slide' })</code>
+        </p>
+      </section>
+
+      <!-- ==================== SLIDE 12: CONFIGURATION ==================== -->
+      <section>
+        <h2>Configuration Options</h2>
+
+        <pre><code data-trim data-noescape class="javascript">
+Reveal.initialize({
+  // Display
+  width: 960,
+  height: 700,
+  center: true,
+
+  // Navigation
+  controls: true,
+  progress: true,
+  slideNumber: true,
+  hash: true,
+
+  // Transitions
+  transition: 'slide',
+  transitionSpeed: 'default',
+
+  // Plugins
+  plugins: [
+    RevealMarkdown,
+    RevealHighlight,
+    RevealNotes
+  ]
+});
+        </code></pre>
+      </section>
+
+      <!-- ==================== SLIDE 13: BENEFITS ==================== -->
+      <section>
+        <h2>Why reveal.js?</h2>
+
+        <div class="columns">
+          <div class="column">
+            <h4>✅ Pros</h4>
+            <ul style="font-size: 0.8em;">
+              <li>Web-based (no software install)</li>
+              <li>Version control friendly</li>
+              <li>Highly customizable</li>
+              <li>Great for developers</li>
+              <li>Free and open source</li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h4>🌐 Browser Support</h4>
+            <ul style="font-size: 0.8em;">
+              <li>Chrome (recommended)</li>
+              <li>Firefox</li>
+              <li>Safari</li>
+              <li>Edge</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 14: RESOURCES ==================== -->
+      <section>
+        <h2>Resources</h2>
+
+        <ul>
+          <li><a href="https://revealjs.com" target="_blank">Official Website</a></li>
+          <li><a href="https://github.com/hakimel/reveal.js" target="_blank">GitHub Repository</a></li>
+          <li><a href="https://revealjs.com/demo" target="_blank">Live Demo</a></li>
+          <li><a href="https://revealjs.com/api" target="_blank">API Documentation</a></li>
+        </ul>
+
+        <div style="margin-top: 40px;">
+          <p style="font-size: 0.8em;">Made with ❤️ using</p>
+          <p>
+            <span class="badge">reveal.js 5.2.1</span>
+            <span class="badge warning">bun</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== SLIDE 15: THANK YOU ==================== -->
+      <section>
+        <h1>Thank You!</h1>
+        <h3>Questions?</h3>
+
+        <p style="margin-top: 50px;">
+          <small>Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">?</kbd> to see keyboard shortcuts</small>
+        </p>
+
+        <div style="margin-top: 30px;">
+          <p style="font-size: 0.7em;">Made with reveal.js + bun</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Load reveal.js and plugins -->
+  <script src="../node_modules/reveal.js/dist/reveal.js"></script>
+  <script src="../node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="../node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+
+  <script>
+    // Initialize reveal.js with configuration
+    Reveal.initialize({
+      // Display and Layout
+      width: 1200,
+      height: 700,
+      margin: 0.1,
+      minScale: 0.2,
+      maxScale: 2.0,
+      center: true,
+
+      // Navigation and Controls
+      controls: true,
+      controlsLayout: 'bottom-right',
+      controlsBackArrows: 'faded',
+      progress: true,
+      slideNumber: true,
+      showSlideNumber: 'all',
+      hash: true,
+      respondToHashChanges: true,
+
+      // Keyboard shortcuts
+      keyboard: true,
+      overview: true,
+      touch: true,
+
+      // Transitions and Animation
+      transition: 'slide',
+      transitionSpeed: 'default',
+      backgroundTransition: 'fade',
+      autoAnimate: true,
+      autoAnimateDuration: 1.0,
+      autoAnimateEasing: 'ease',
+
+      // Fragments
+      fragments: true,
+      fragmentInURL: true,
+
+      // Auto-Slide
+      autoSlide: 0,
+      autoSlideStoppable: true,
+
+      // View Modes
+      view: null,
+      scrollProgress: 'auto',
+
+      // Media
+      autoPlayMedia: null,
+      preloadIframes: null,
+
+      // Presentation Features
+      overview: true,
+      help: true,
+      pause: true,
+      jumpToSlide: true,
+      showNotes: false,
+
+      // Performance
+      viewDistance: 3,
+      mobileViewDistance: 2,
+
+      // Plugins
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight
+      ]
+    }).then(() => {
+      console.log('✅ Presentation is ready!');
+      console.log('📊 Reveal.js version:', Reveal.getVersion());
+    });
+  </script>
+</body>
+</html>
