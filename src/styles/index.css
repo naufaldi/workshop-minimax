@@ -1,0 +1,86 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  text-transform: none;
+}
+
+.reveal .slides section {
+  padding: 20px;
+}
+
+.reveal ul {
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.reveal .slides section.title-only {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.reveal h2 {
+  color: #ff6b6b;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reveal h3 {
+  color: #4ecdc4;
+  font-size: 1.3em;
+}
+
+.reveal li {
+  color: #f7f7f7;
+}
+
+.reveal li::marker {
+  color: #ff6b6b;
+}
+
+.highlight {
+  color: #ffe66d;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #4ecdc4;
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+.accent-pink {
+  color: #ff6b6b;
+}
+
+.accent-green {
+  color: #4ecdc4;
+}
+
+.accent-yellow {
+  color: #ffe66d;
+}
+
+.accent-purple {
+  color: #a29bfe;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ff6b6b, #ffe66d, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.emoji {
+  margin-right: 10px;
+}
+
+.fragment.fade-up {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.fragment.fade-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}

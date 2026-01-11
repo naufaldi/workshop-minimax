@@ -4,483 +4,457 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>My Presentation - reveal.js</title>
+  <title>101 Vibe Engineering with MiniMax M2.1</title>
 
   <meta name="description" content="A reveal.js presentation created with bun">
 
-  <!-- Core reveal.js styles -->
   <link rel="stylesheet" href="../node_modules/reveal.js/dist/reset.css">
   <link rel="stylesheet" href="../node_modules/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="../node_modules/reveal.js/dist/theme/black.css">
 
-  <!-- Plugin styles -->
   <link rel="stylesheet" href="../node_modules/reveal.js/plugin/highlight/monokai.css">
 
-  <!-- Custom styles -->
-  <style>
-    /* Custom CSS for additional styling */
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-      text-transform: none;
-    }
-
-    .reveal .slides section {
-      padding: 20px;
-    }
-
-    /* Code block styling */
-    .reveal pre {
-      margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Image placeholder styling */
-    .image-placeholder {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      border: 2px dashed #4a5568;
-      border-radius: 8px;
-      padding: 40px;
-      color: #718096;
-      font-size: 0.8em;
-    }
-
-    /* Custom fragment animations */
-    .fragment.fade-up {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-
-    .fragment.fade-up.visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* Highlight important text */
-    .highlight {
-      color: #42b883;
-      font-weight: bold;
-    }
-
-    /* Two-column layout */
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .column {
-      flex: 1;
-    }
-
-    /* Badge styling */
-    .badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.6em;
-      margin: 5px;
-      background: #42b883;
-      color: #fff;
-    }
-
-    .badge.warning {
-      background: #f6ad55;
-      color: #1a1a2e;
-    }
-
-    .badge.info {
-      background: #4299e1;
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="styles/index.css">
 
 <body>
-  <!-- Required wrapper structure -->
   <div class="reveal">
     <div class="slides">
 
-      <!-- ==================== SLIDE 1: TITLE ==================== -->
-      <section>
-        <h1>My Presentation</h1>
-        <h3>Built with reveal.js</h3>
-        <p>
-          <small>Created with ❤️ using reveal.js 5.2.1 + bun</small>
-        </p>
-
-        <div style="margin-top: 50px;">
-          <span class="badge">HTML</span>
-          <span class="badge warning">CSS</span>
-          <span class="badge info">JavaScript</span>
-        </div>
+      <!-- Intro Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Intro</h1>
+        <h2 class="fragment fade-up accent-yellow">101 Vibe Engineering with MiniMax M2.1</h2>
+        <p class="fragment fade-up subtitle">Let's build some vibes! 🚀</p>
       </section>
 
-      <!-- ==================== SLIDE 2: AGENDA ==================== -->
-      <section>
-        <h2>Agenda</h2>
+      <!-- Who Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Who ?</h1>
+        <h2 class="fragment fade-down accent-green">Naufaldi Rafif Satriya</h2>
         <ul>
-          <li class="fragment fade-up">Introduction to reveal.js</li>
-          <li class="fragment fade-up">Features and Capabilities</li>
-          <li class="fragment fade-up">Markdown Support</li>
-          <li class="fragment fade-up">Code Syntax Highlighting</li>
-          <li class="fragment fade-up">Vertical Slides</li>
-          <li class="fragment fade-up">Q&A</li>
+          <li class="fragment fade-right"><span class="emoji">💼</span>Senior Software Engineer at an FMCG Company</li>
+          <li class="fragment fade-right"><span class="emoji">🎯</span>Dev Ambassador at <span class="highlight">Minimax</span></li>
+          <li class="fragment fade-right"><span class="emoji">🐙</span><a href="https://github.com/naufaldi">@naufaldi</a></li>
+          <li class="fragment fade-right"><span class="emoji">🐦</span><a href="https://x.com/f2aldi">@f2aldi</a></li>
         </ul>
       </section>
 
-      <!-- ==================== SLIDE 3: WHAT IS REVEAL.JS ==================== -->
-      <section>
-        <section>
-          <h2>What is reveal.js?</h2>
-          <p class="fragment fade-up">
-            <span class="highlight">reveal.js</span> is an open-source HTML presentation framework
-          </p>
-          <p class="fragment fade-up">
-            It enables anyone with a web browser to create beautiful presentations
-          </p>
-
-          <div class="fragment fade-up" style="margin-top: 40px;">
-            <div class="columns">
-              <div class="column">
-                <h4>🎨</h4>
-                <p>Beautiful themes</p>
-              </div>
-              <div class="column">
-                <h4>📝</h4>
-                <p>Markdown support</p>
-              </div>
-              <div class="column">
-                <h4>💻</h4>
-                <p>Syntax highlighting</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Vertical sub-slide -->
-        <section>
-          <h3>Key Features</h3>
-          <ul>
-            <li>Nested slides (horizontal & vertical)</li>
-            <li>Auto-animate transitions</li>
-            <li>Fragment animations</li>
-            <li>Speaker notes</li>
-            <li>PDF export</li>
-            <li>Math typesetting (LaTeX)</li>
-            <li>Zoom & Search</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- ==================== SLIDE 4: BASIC HTML SLIDES ==================== -->
-      <section>
-        <h2>Basic HTML Structure</h2>
-        <p>reveal.js works with standard HTML markup</p>
-
-        <div class="fragment fade-up">
-          <pre><code data-trim data-noescape class="html">
-&lt;div class="reveal"&gt;
-  &lt;div class="slides"&gt;
-    &lt;section&gt;
-      &lt;h2&gt;My Slide&lt;/h2&gt;
-      &lt;p&gt;Content goes here&lt;/p&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-          </code></pre>
-        </div>
-
-        <p class="fragment fade-up" style="font-size: 0.7em; margin-top: 20px;">
-          Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">Space</kbd> or <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">→</kbd> to navigate
-        </p>
-      </section>
-
-      <!-- ==================== SLIDE 5: MARKDOWN SUPPORT ==================== -->
-      <section data-markdown>
-        <script type="text/template">
-          ## Markdown Support
-
-          You can write your slides in **Markdown**!
-
-          ### Features:
-          - Write content using familiar Markdown syntax
-          - Use `---` for horizontal slides
-          - Use `--` for vertical slides
-          - Add custom attributes to slides
-
-          ### Code blocks:
-          ```javascript
-          function greet(name) {
-            return `Hello, ${name}!`;
-          }
-          ```
-
-          > Markdown makes content creation fast and easy!
-        </script>
-      </section>
-
-      <!-- ==================== SLIDE 6: CODE SYNTAX HIGHLIGHTING ==================== -->
-      <section>
-        <h2>Syntax Highlighting</h2>
-        <p>Code examples are beautifully highlighted</p>
-
-        <div class="columns">
-          <div class="column">
-            <h4>JavaScript</h4>
-            <pre><code data-trim data-noescape class="javascript">
-// Fibonacci sequence
-function fib(n) {
-  if (n <= 1) return n;
-  return fib(n-1) + fib(n-2);
-}
-
-console.log(fib(10)); // 55
-            </code></pre>
-          </div>
-
-          <div class="column">
-            <h4>Python</h4>
-            <pre><code data-trim data-noescape class="python">
-# List comprehension
-squares = [x**2 for x in range(10)]
-
-# Generator expression
-gen = (x**2 for x in range(10))
-
-def greet(name: str) -> str:
-    return f"Hello, {name}!"
-            </code></pre>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================== SLIDE 7: ADVANCED CODE HIGHLIGHTING ==================== -->
-      <section>
-        <h2>Line Highlighting</h2>
-        <p>Highlight specific lines in your code</p>
-
-        <pre><code data-trim data-noescape data-line-numbers="2|4-6|8" class="javascript">
-function calculateFactorial(n) {
-  // Base case: 0! = 1
-  if (n === 0) return 1;
-
-  // Recursive case
-  return n * calculateFactorial(n - 1);
-}
-
-console.log(calculateFactorial(5)); // 120
-        </code></pre>
-
-        <p style="font-size: 0.7em; margin-top: 20px;">
-          Use <code style="background: #4a5568; padding: 2px 6px; border-radius: 4px;">data-line-numbers="2|4-6"</code> to highlight specific lines
-        </p>
-      </section>
-
-      <!-- ==================== SLIDE 8: FRAGMENTS ==================== -->
-      <section>
-        <h2>Fragment Animations</h2>
-        <p>Elements can appear one at a time</p>
-
+      <!-- Built with AI -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-purple">Built with AI</h2>
+        <h3 class="fragment fade-down accent-yellow">MiniMax M2.1</h3>
         <ul>
-          <li class="fragment fade-up">First item appears</li>
-          <li class="fragment fade-up">Second item follows</li>
-          <li class="fragment fade-up">Third item comes next</li>
-          <li class="fragment fade-up">And so on...</li>
+          <li class="fragment fade-left"><span class="emoji">🔧</span><a href="https://github.com/naufaldi/go-pixo">Go Pixo</a></li>
         </ul>
-
-        <div class="fragment fade-up" style="margin-top: 30px;">
-          <p style="color: #42b883;">🎉 All items are now visible!</p>
-        </div>
-      </section>
-
-      <!-- ==================== SLIDE 9: VERTICAL SLIDES ==================== -->
-      <section>
-        <section>
-          <h2>Vertical Slides</h2>
-          <p>Use nested sections for vertical navigation</p>
-          <p class="fragment fade-up">
-            Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">↓</kbd> to go down
-          </p>
-          <p class="fragment fade-up">
-            Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">↑</kbd> to go up
-          </p>
-        </section>
-
-        <section>
-          <h3>Sub-slide 1</h3>
-          <p>This is a nested vertical slide</p>
-          <p style="font-size: 0.7em; color: #718096;">
-            Great for organizing related content
-          </p>
-        </section>
-
-        <section>
-          <h3>Sub-slide 2</h3>
-          <p>Another vertical slide</p>
-          <ul>
-            <li>Point A</li>
-            <li>Point B</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- ==================== SLIDE 10: MEDIA PLACEHOLDER ==================== -->
-      <section>
-        <h2>Images & Media</h2>
-
-        <div class="columns">
-          <div class="column">
-            <div class="image-placeholder">
-              <div style="font-size: 3em; margin-bottom: 10px;">🖼️</div>
-              <p>Image Placeholder</p>
-              <p style="font-size: 0.7em;">Add your image here</p>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="image-placeholder">
-              <div style="font-size: 3em; margin-bottom: 10px;">🎬</div>
-              <p>Video Placeholder</p>
-              <p style="font-size: 0.7em;">Embed videos easily</p>
-            </div>
-          </div>
-        </div>
-
-        <p style="font-size: 0.7em; margin-top: 20px;">
-          Supported formats: JPG, PNG, GIF, SVG, MP4, WebM, YouTube, Vimeo
-        </p>
-      </section>
-
-      <!-- ==================== SLIDE 11: TRANSITIONS ==================== -->
-      <section>
-        <h2>Transition Effects</h2>
-        <p>Multiple transition styles available</p>
-
-        <div class="columns" style="font-size: 0.8em;">
-          <div class="column">
-            <ul>
-              <li><code>none</code> - No transition</li>
-              <li><code>fade</code> - Cross fade</li>
-              <li><code>slide</code> - Slide in/out</li>
-            </ul>
-          </div>
-          <div class="column">
-            <ul>
-              <li><code>convex</code> - Convex slide</li>
-              <li><code>concave</code> - Concave slide</li>
-              <li><code>zoom</code> - Zoom in/out</li>
-            </ul>
-          </div>
-        </div>
-
-        <p style="font-size: 0.7em; margin-top: 30px;">
-          Set in <code>Reveal.initialize({ transition: 'slide' })</code>
-        </p>
-      </section>
-
-      <!-- ==================== SLIDE 12: CONFIGURATION ==================== -->
-      <section>
-        <h2>Configuration Options</h2>
-
-        <pre><code data-trim data-noescape class="javascript">
-Reveal.initialize({
-  // Display
-  width: 960,
-  height: 700,
-  center: true,
-
-  // Navigation
-  controls: true,
-  progress: true,
-  slideNumber: true,
-  hash: true,
-
-  // Transitions
-  transition: 'slide',
-  transitionSpeed: 'default',
-
-  // Plugins
-  plugins: [
-    RevealMarkdown,
-    RevealHighlight,
-    RevealNotes
-  ]
-});
-        </code></pre>
-      </section>
-
-      <!-- ==================== SLIDE 13: BENEFITS ==================== -->
-      <section>
-        <h2>Why reveal.js?</h2>
-
-        <div class="columns">
-          <div class="column">
-            <h4>✅ Pros</h4>
-            <ul style="font-size: 0.8em;">
-              <li>Web-based (no software install)</li>
-              <li>Version control friendly</li>
-              <li>Highly customizable</li>
-              <li>Great for developers</li>
-              <li>Free and open source</li>
-            </ul>
-          </div>
-
-          <div class="column">
-            <h4>🌐 Browser Support</h4>
-            <ul style="font-size: 0.8em;">
-              <li>Chrome (recommended)</li>
-              <li>Firefox</li>
-              <li>Safari</li>
-              <li>Edge</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================== SLIDE 14: RESOURCES ==================== -->
-      <section>
-        <h2>Resources</h2>
-
+        <h3 class="fragment fade-down accent-green" style="margin-top: 40px;">Other Models</h3>
         <ul>
-          <li><a href="https://revealjs.com" target="_blank">Official Website</a></li>
-          <li><a href="https://github.com/hakimel/reveal.js" target="_blank">GitHub Repository</a></li>
-          <li><a href="https://revealjs.com/demo" target="_blank">Live Demo</a></li>
-          <li><a href="https://revealjs.com/api" target="_blank">API Documentation</a></li>
+          <li class="fragment fade-left"><span class="emoji">📚</span><a href="https://github.com/naufaldi/bookapi">Book API</a></li>
+          <li class="fragment fade-left"><span class="emoji">🎨</span><a href="https://github.com/naufaldi/excalidraw-clone">Excalidraw Clone</a></li>
         </ul>
-
-        <div style="margin-top: 40px;">
-          <p style="font-size: 0.8em;">Made with ❤️ using</p>
-          <p>
-            <span class="badge">reveal.js 5.2.1</span>
-            <span class="badge warning">bun</span>
-          </p>
-        </div>
       </section>
 
-      <!-- ==================== SLIDE 15: THANK YOU ==================== -->
-      <section>
-        <h1>Thank You!</h1>
-        <h3>Questions?</h3>
+      <!-- 8 Months Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">8 Months Working with Agentic AI</h1>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">💻</span>Using Cursor</li>
+          <li class="fragment fade-right"><span class="emoji">🐚</span>OpenCode, Claude Code CLI</li>
+          <li class="fragment fade-right"><span class="emoji">🚀</span>Shipping Product with Agentic AI into Production</li>
+          <li class="fragment fade-right"><span class="emoji">👥</span>Team Fully AI: Codex, Claude, Trae, Copilot...</li>
+        </ul>
+      </section>
 
-        <p style="margin-top: 50px;">
-          <small>Press <kbd style="background: #4a5568; padding: 4px 8px; border-radius: 4px;">?</kbd> to see keyboard shortcuts</small>
-        </p>
+      <!-- Disclaimer Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Disclaimer</h1>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">⚠️</span>I am not an AI Engineer. I am a Software Engineer who is interested in AI.</li>
+          <li class="fragment fade-up"><span class="emoji">💡</span>I am not an expert in AI. I am an Engineer who leverages AI to build things.</li>
+          <li class="fragment fade-up"><span class="emoji">🔄</span>What I share today may be outdated since AI evolves very fast.</li>
+        </ul>
+      </section>
 
-        <div style="margin-top: 30px;">
-          <p style="font-size: 0.7em;">Made with reveal.js + bun</p>
-        </div>
+      <!-- Goal of Workshop -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Goal of Workshop</h1>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">🛠️</span>Setup Tools</li>
+          <li class="fragment fade-left"><span class="emoji">📝</span>Learning Prompting</li>
+          <li class="fragment fade-left"><span class="emoji">🔄</span>Learning about Workflow with AI</li>
+        </ul>
+      </section>
+
+      <!-- End of Workshop -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">End of Workshop</h1>
+        <h2 class="fragment fade-up accent-yellow">Confidence to use AI to build things! 🎉</h2>
+      </section>
+
+      <!-- Tools Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Tools</h1>
+        <h2 class="fragment fade-down accent-purple">IDE and Terminal</h2>
+      </section>
+
+      <!-- IDE Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">IDE</h1>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">🖥️</span><a href="https://cursor.com/">Cursor</a></li>
+          <li class="fragment fade-right"><span class="emoji">🌊</span><a href="https://windsurf.dev/">Windsurf</a></li>
+          <li class="fragment fade-right"><span class="emoji">⚡</span><a href="https://zed.dev/">Zed</a></li>
+        </ul>
+      </section>
+
+      <!-- Terminal Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Terminal</h1>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">🤖</span><a href="https://opencode.ai">OpenCode</a></li>
+          <li class="fragment fade-left"><span class="emoji">🦉</span><a href="https://code.claude.com/docs/en/cli-reference">Claude Code CLI</a></li>
+          <li class="fragment fade-left"><span class="emoji">⚡</span><a href="https://ampcode.com/free">AMP CLI</a></li>
+        </ul>
+      </section>
+
+      <!-- Why This Workshop -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Why This Workshop?</h1>
+        <ol>
+          <li class="fragment fade-up"><span class="emoji">🌍</span>Spreading Open Source Tools and Models</li>
+          <li class="fragment fade-up"><span class="emoji">🤝</span>Sharing Knowledge and Experience</li>
+          <li class="fragment fade-up"><span class="emoji">🌱</span>Helping Others to Learn and Grow</li>
+          <li class="fragment fade-up"><span class="emoji">🏗️</span>Building a Community of Practice</li>
+        </ol>
+      </section>
+
+      <!-- Why OpenCode -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-green">Why OpenCode?</h2>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">🆓</span>Free Tools and Free Models</li>
+          <li class="fragment fade-right"><span class="emoji">🔥</span>Currently GLM 4.7, Big Pickle and Grok Code Fast 1 free</li>
+          <li class="fragment fade-right"><span class="emoji">⚙️</span>Adopts Claude Code Config</li>
+          <li class="fragment fade-right"><span class="emoji">🔧</span>Supports LSP</li>
+        </ul>
+      </section>
+
+      <!-- Why MiniMax -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-pink">Why MiniMax M2.1?</h2>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">🧠</span>Fast and Smart Models</li>
+          <li class="fragment fade-left"><span class="emoji">🏅</span>Dev Ambassador</li>
+          <li class="fragment fade-left"><span class="emoji">⚔️</span>Able to rival Sonnet 4.5 in terms of quality</li>
+          <li class="fragment fade-left"><span class="emoji">⚡</span>More Speed</li>
+          <li class="fragment fade-left"><span class="emoji">🔓</span>Open Weight</li>
+          <li class="fragment fade-left"><span class="emoji">🌐</span>Supports Open Source Models and Alternative Models</li>
+        </ul>
+      </section>
+
+      <!-- MiniMax Overview -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">MiniMax M2.1 Overview</h1>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">💬</span>Multi-language programming</li>
+          <li class="fragment fade-up"><span class="emoji">🌐</span>Web Development</li>
+          <li class="fragment fade-up"><span class="emoji">💾</span>10B Parameters active</li>
+        </ul>
+      </section>
+
+      <!-- MiniMax Comparison -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">MiniMax M2.1 Comparison</h1>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">❌</span>Does not compete with Opus 4.5 or GPT 5.2 Height</li>
+          <li class="fragment fade-right"><span class="emoji">✅</span>Competes with Sonnet 4.5, Gemini Flash 3, GLM 4.7</li>
+        </ul>
+      </section>
+
+      <!-- MiniMax Benefits -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">MiniMax M2.1 Benefits</h1>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">💸</span>Affordable: $10 or $2 for first month</li>
+          <li class="fragment fade-left"><span class="emoji">🔗</span>Integrates with OpenCode, Claude Code CLI, Cursor, Windsurf, Zed</li>
+          <li class="fragment fade-left"><span class="emoji">🎟️</span>100 Prompts / 5 Hours</li>
+          <li class="fragment fade-left"><span class="emoji">🔌</span>MCP support for Search and Image</li>
+        </ul>
+      </section>
+
+      <!-- MiniMax Considerations -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">MiniMax M2.1 Considerations</h1>
+        <h2 class="fragment fade-down accent-yellow">Cons</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">🧩</span>Hard to work on complex tasks</li>
+        </ul>
+        <h2 class="fragment fade-down accent-green" style="margin-top: 30px;">Use Cases</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">🤏</span>Small Tasks</li>
+          <li class="fragment fade-up"><span class="emoji">📏</span>Medium Tasks</li>
+          <li class="fragment fade-up"><span class="emoji">⏳</span>Long-running Tasks</li>
+        </ul>
+      </section>
+
+      <!-- Setup Tools -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Setup Tools</h1>
+        <h2 class="fragment fade-down accent-yellow">We'll cover:</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">🔧</span>OpenCode with MiniMax M2.1</li>
+        </ul>
+      </section>
+
+      <!-- Learn to Prompting -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-purple">Learn to Prompting</h1>
+        <h2 class="fragment fade-down accent-green">Prompt Framework (TCERI)</h2>
+        <ol>
+          <li class="fragment fade-in-then-semi-out">1. Task</li>
+          <li class="fragment fade-in-then-semi-out">2. Context</li>
+          <li class="fragment fade-in-then-semi-out">3. References</li>
+          <li class="fragment fade-in-then-semi-out">4. Evaluate</li>
+          <li class="fragment fade-in-then-semi-out">5. Iterate</li>
+        </ol>
+      </section>
+
+      <!-- Task -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Task</h1>
+        <ol>
+          <li class="fragment fade-right"><span class="emoji">✍️</span>Writing ask or command to do something</li>
+          <li class="fragment fade-right"><span class="emoji">🎯</span>Be specific and clear</li>
+          <li class="fragment fade-right"><span class="emoji">📄</span>Specify Format</li>
+        </ol>
+      </section>
+
+      <!-- Examples: Task -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Examples: Task</h1>
+        <ul>
+          <li class="fragment fade-left">"Search in codebase for code improvement opportunities"</li>
+          <li class="fragment fade-left">"I want you to create a plan in markdown format for adding a login page"</li>
+          <li class="fragment fade-left">"Why did you edit this file? Why not use XX...?"</li>
+        </ul>
+      </section>
+
+      <!-- Context -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">Context</h1>
+        <ol>
+          <li class="fragment fade-right"><span class="emoji">📚</span>Provide Background Information</li>
+          <li class="fragment fade-right"><span class="emoji">🔗</span>Provide Related Information</li>
+        </ol>
+      </section>
+
+      <!-- Examples: Context -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Examples: Context</h1>
+        <ul>
+          <li class="fragment fade-left">"Here is the code you should improve: @page.tsx @component.tsx..."</li>
+          <li class="fragment fade-left">"Here are the reference documents: @prd.docs @user.docs..."</li>
+          <li class="fragment fade-left">"Search the internet about code improvement best practices..."</li>
+        </ul>
+      </section>
+
+      <!-- References -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-purple">References</h1>
+        <ol>
+          <li class="fragment fade-right"><span class="emoji">🖼️</span>Reference Example of output</li>
+          <li class="fragment fade-right"><span class="emoji">📖</span>Reference of this material</li>
+        </ol>
+      </section>
+
+      <!-- Examples: References -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Examples: References</h1>
+        <ul>
+          <li class="fragment fade-left">"Based on this screenshot and Figma data, create a design..."</li>
+          <li class="fragment fade-left">"I want you to create a function... use the pattern from @tanstack/react-query"</li>
+          <li class="fragment fade-left">"Search about best practices for creating functions..."</li>
+        </ul>
+      </section>
+
+      <!-- Evaluate -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">Evaluate</h1>
+        <ol>
+          <li class="fragment fade-right"><span class="emoji">🧐</span>Does the output meet the task?</li>
+          <li class="fragment fade-right"><span class="emoji">🎯</span>Does it align with our goal?</li>
+        </ol>
+      </section>
+
+      <!-- Examples: Evaluate -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Examples: Evaluate</h1>
+        <ul>
+          <li class="fragment fade-left">"That's not what I mean. I told you to make it more readable..."</li>
+          <li class="fragment fade-left">"Don't change the code yet. Just create the plan first"</li>
+          <li class="fragment fade-left">"Astagfirullah! Make the design look like the screenshot..."</li>
+        </ul>
+      </section>
+
+      <!-- Iterate -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-purple">Iterate</h1>
+        <ol>
+          <li class="fragment fade-right"><span class="emoji">🔄</span>Hard to one-shot prompt. You need to iterate</li>
+          <li class="fragment fade-right"><span class="emoji">➕</span>Add additional context, references, expectations</li>
+        </ol>
+      </section>
+
+      <!-- Let's Get into Practice -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Let's Get into Practice</h1>
+        <h2 class="fragment fade-down accent-yellow">Start from Zero</h2>
+        <ul>
+          <li class="fragment fade-up">1. Setup Project</li>
+          <li class="fragment fade-up">2. Add docs for reference</li>
+          <li class="fragment fade-up">3. Write prompts using TCERI framework</li>
+          <li class="fragment fade-up">4. Iterate and Improve</li>
+        </ul>
+      </section>
+
+      <!-- Add New Feature -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Add New Feature</h1>
+        <ul>
+          <li class="fragment fade-right">1. Explain the existing feature to me</li>
+          <li class="fragment fade-right">2. Let's brainstorm about the new feature</li>
+          <li class="fragment fade-right">3. Create a plan with the AI</li>
+        </ul>
+      </section>
+
+      <!-- Workflow with AI -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Workflow with AI</h1>
+        <h2 class="fragment fade-down accent-yellow">We are Manager and Senior</h2>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">👑</span>Acting as Manager and Senior Engineer</li>
+          <li class="fragment fade-right"><span class="emoji">📏</span>Provide Scope of Work</li>
+          <li class="fragment fade-right"><span class="emoji">📚</span>Provide Reference of material</li>
+          <li class="fragment fade-right"><span class="emoji">📝</span>List of Todo and Task</li>
+        </ul>
+      </section>
+
+      <!-- What if we are not... -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-green">What if we are not Manager and Senior?</h2>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">💡</span>Brainstorming with AI</li>
+          <li class="fragment fade-left"><span class="emoji">📋</span>Ask AI to create scope of work</li>
+          <li class="fragment fade-left"><span class="emoji">📖</span>Ask AI to provide Reference of material</li>
+          <li class="fragment fade-left"><span class="emoji">✅</span>Ask AI to create Todo and Task</li>
+        </ul>
+      </section>
+
+      <!-- AI is Someone Smart... -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-pink">AI is Someone Smart but Don't Know What to Do</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">🎯</span>Provide Expectation and Goal</li>
+          <li class="fragment fade-up"><span class="emoji">🚫</span>Define Out of Scope</li>
+        </ul>
+      </section>
+
+      <!-- How to Make It Easy? -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">How to Make It Easy?</h1>
+        <p class="fragment fade-up">As an Engineer, what do you need from PM/Design?</p>
+        <p class="fragment fade-up">If We Need It, Why Would AI Not Need It?</p>
+      </section>
+
+      <!-- AI Requirements -->
+      <section data-auto-animate>
+        <h2 class="fragment zoom-in accent-green">AI Needs the Same Context You Do!</h2>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">📄</span>PRD, User Story, Edge Case, Goal</li>
+          <li class="fragment fade-right"><span class="emoji">💻</span>Code Reference, Package version</li>
+          <li class="fragment fade-right"><span class="emoji">🎨</span>Figma Design, Screenshot</li>
+          <li class="fragment fade-right"><span class="emoji">🔑</span>Credentials, API, Database</li>
+          <li class="fragment fade-right"><span class="emoji">🧱</span>Constraints, Limitations, Dependencies</li>
+        </ul>
+      </section>
+
+      <!-- Skill Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-purple">Skill</h1>
+        <h2 class="fragment fade-down accent-yellow">Knowledge, Capabilities, Expertise</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">📁</span>Open Format for Domain Expertise</li>
+          <li class="fragment fade-up"><span class="emoji">🏢</span>Business Context</li>
+          <li class="fragment fade-up"><span class="emoji">🎨</span>Frontend / Design Skills</li>
+        </ul>
+      </section>
+
+      <!-- MCP Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-green">MCP</h1>
+        <h2 class="fragment fade-down accent-pink">Model Context Protocol</h2>
+        <ul>
+          <li class="fragment fade-left"><span class="emoji">🐙</span>GitHub / GitLab for Tasks</li>
+          <li class="fragment fade-left"><span class="emoji">🔍</span>Context7 for Dependencies</li>
+          <li class="fragment fade-left"><span class="emoji">🎨</span>Figma MCP for Design Data</li>
+        </ul>
+      </section>
+
+      <!-- Commands Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Commands</h1>
+        <h2 class="fragment fade-down accent-purple">Repeatable Workflow</h2>
+        <ul>
+          <li class="fragment fade-right"><span class="emoji">📋</span>Creating format plan</li>
+          <li class="fragment fade-right"><span class="emoji">🚀</span>Create MR / PR</li>
+          <li class="fragment fade-right"><span class="emoji">🔄</span>Repeatable Prompts</li>
+        </ul>
+      </section>
+
+      <!-- Rules Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-pink">Rules</h1>
+        <h2 class="fragment fade-down accent-green">Constraints & Expectations</h2>
+        <ul>
+          <li class="fragment fade-up"><span class="emoji">💅</span>Code Style</li>
+          <li class="fragment fade-up"><span class="emoji">🛠️</span>Setup Commands</li>
+          <li class="fragment fade-up"><span class="emoji">🧪</span>Testing Instructions</li>
+          <li class="fragment fade-up"><span class="emoji">📖</span>Project Overview</li>
+        </ul>
+      </section>
+
+      <!-- Key Takeaways -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">Key Takeaways</h1>
+        <ol>
+          <li class="fragment fade-right">Use TCERI Framework</li>
+          <li class="fragment fade-right">AI needs expectations & scope</li>
+          <li class="fragment fade-right">Skills, MCP, Commands, Rules enrich context</li>
+          <li class="fragment fade-right">Practice makes perfect! 🚀</li>
+        </ol>
+      </section>
+
+      <!-- Next Steps -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in accent-yellow">Next Steps</h1>
+        <p class="fragment fade-up">Set up OpenCode with MCP, Skills, Commands, and Rules</p>
+        <h2 class="fragment zoom-in accent-green" style="margin-top: 40px;">Combine Everything! 🎉</h2>
+      </section>
+
+      <!-- QnA Section -->
+      <section data-auto-animate>
+        <h1 class="fragment zoom-in text-gradient">QnA</h1>
+        <h2 class="fragment fade-up accent-yellow">Questions? 🤔</h2>
       </section>
 
     </div>
   </div>
 
-  <!-- Load reveal.js and plugins -->
   <script src="../node_modules/reveal.js/dist/reveal.js"></script>
   <script src="../node_modules/reveal.js/plugin/markdown/markdown.js"></script>
   <script src="../node_modules/reveal.js/plugin/highlight/highlight.js"></script>
 
   <script>
-    // Initialize reveal.js with configuration
     Reveal.initialize({
-      // Display and Layout
       width: 1200,
       height: 700,
       margin: 0.1,
@@ -488,7 +462,6 @@ Reveal.initialize({
       maxScale: 2.0,
       center: true,
 
-      // Navigation and Controls
       controls: true,
       controlsLayout: 'bottom-right',
       controlsBackArrows: 'faded',
@@ -498,54 +471,44 @@ Reveal.initialize({
       hash: true,
       respondToHashChanges: true,
 
-      // Keyboard shortcuts
       keyboard: true,
       overview: true,
       touch: true,
 
-      // Transitions and Animation
-      transition: 'slide',
+      transition: 'fade',
       transitionSpeed: 'default',
       backgroundTransition: 'fade',
       autoAnimate: true,
       autoAnimateDuration: 1.0,
       autoAnimateEasing: 'ease',
 
-      // Fragments
       fragments: true,
       fragmentInURL: true,
 
-      // Auto-Slide
       autoSlide: 0,
       autoSlideStoppable: true,
 
-      // View Modes
       view: null,
       scrollProgress: 'auto',
 
-      // Media
       autoPlayMedia: null,
       preloadIframes: null,
 
-      // Presentation Features
       overview: true,
       help: true,
       pause: true,
       jumpToSlide: true,
       showNotes: false,
 
-      // Performance
       viewDistance: 3,
       mobileViewDistance: 2,
 
-      // Plugins
       plugins: [
         RevealMarkdown,
         RevealHighlight
       ]
     }).then(() => {
-      console.log('✅ Presentation is ready!');
-      console.log('📊 Reveal.js version:', Reveal.getVersion());
+      console.log('Presentation is ready!');
     });
   </script>
 </body>
