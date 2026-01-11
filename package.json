@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "bun server.js",
     "start": "bun run dev",
-    "serve": "bun run dev"
+    "serve": "bun run dev",
+    "build": "bun build.js"
   },
   "devDependencies": {
     "@types/bun": "latest"
